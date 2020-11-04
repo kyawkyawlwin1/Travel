@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Journey" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=desktop-2uiun1b\sqlexpress;Initial Catalog=Journey;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="JourneyConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Famous_Place" Member="Famous_Places">
+    <Type Name="Famous_Place">
+      <Column Name="Famous_Place_ID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Famous_Place_Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Famous_Place_Desc" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Visit_Place_ID" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Food_Bev" Member="Food_Bevs">
+    <Type Name="Food_Bev">
+      <Column Name="Food_Bev_ID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Food_Bev_Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Food_Bev_Desc" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Visit_Place_ID" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hospital_Clinic" Member="Hospital_Clinics">
+    <Type Name="Hospital_Clinic">
+      <Column Name="Hospital_Clinic_ID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Hospital_Clinic_Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Hospital_Clinic_Desc" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Visit_Place_ID" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hotel" Member="Hotels">
+    <Type Name="Hotel">
+      <Column Name="Hotel_ID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Hotel_Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Hotel_Desc" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Visit_Place_ID" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Souvenir_Shop" Member="Souvenir_Shops">
+    <Type Name="Souvenir_Shop">
+      <Column Name="Souvenir_Shop_ID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Souvenir_Shop_Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Souvenir_Shop_Desc" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Visit_Place_ID" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbVPimg" Member="tbVPimgs">
+    <Type Name="tbVPimg">
+      <Column Name="Visit_Place_Image_ID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Visit_Place_ID" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="image" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vehicle" Member="Vehicles">
+    <Type Name="Vehicle">
+      <Column Name="Vehicle_ID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Vehicle_Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Vehicle_Desc" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Visit_Place_ID" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Visit_Place" Member="Visit_Places">
+    <Type Name="Visit_Place">
+      <Column Name="Visit_Place_ID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Visit_Place_Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Visit_Place_Desc" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.625" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bb450daf-8952-416f-aacb-30c9b1b9c3c7" absoluteBounds="0.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/Famous_Place" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e739411-809c-4a05-8c7e-1be0ec80eadf" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="391573b0-dc16-4e0a-9c00-d9e0322e7076" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/Food_Bev" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec73a797-feb5-470d-a264-c67ecfc83334" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3cb6211-fad7-4f08-8c7c-dc0d6b098852" absoluteBounds="0.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/Hospital_Clinic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be872039-21c1-470e-8c9d-c3c7830bea7b" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23516436-9752-46c0-b327-eb467dab5d9b" absoluteBounds="3.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/Hotel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4746e6e7-df5c-4201-8cf6-9008af3afd95" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2287c30b-0115-4865-95b3-a063b4d808e6" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/Souvenir_Shop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8066b138-5b9c-4010-a509-a137ad917a90" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f861875-f237-4a2b-a3a6-5bc240eb5bae" absoluteBounds="0.75, 6.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesDataContext/tbVPimg" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b158b3e4-4cff-410e-baf1-64534522e124" absoluteBounds="0.765, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eb567d45-bd01-4da4-ad22-1ee540b75c53" absoluteBounds="6.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/Vehicle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9452db97-8a54-41e0-b748-7d96ccc88187" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b9bbe5b-a61d-4fe0-8ccc-06988f9d1d03" absoluteBounds="3.75, 6.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/Visit_Place" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc2059cd-f81c-4e3b-92d0-76fc93a48cb0" absoluteBounds="3.765, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
