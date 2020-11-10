@@ -54,6 +54,24 @@ namespace Travel
     partial void InsertVisit_Place(Visit_Place instance);
     partial void UpdateVisit_Place(Visit_Place instance);
     partial void DeleteVisit_Place(Visit_Place instance);
+    partial void InserttbFBimg(tbFBimg instance);
+    partial void UpdatetbFBimg(tbFBimg instance);
+    partial void DeletetbFBimg(tbFBimg instance);
+    partial void InserttbFPimg(tbFPimg instance);
+    partial void UpdatetbFPimg(tbFPimg instance);
+    partial void DeletetbFPimg(tbFPimg instance);
+    partial void InserttbHCimg(tbHCimg instance);
+    partial void UpdatetbHCimg(tbHCimg instance);
+    partial void DeletetbHCimg(tbHCimg instance);
+    partial void InserttbHotelimg(tbHotelimg instance);
+    partial void UpdatetbHotelimg(tbHotelimg instance);
+    partial void DeletetbHotelimg(tbHotelimg instance);
+    partial void InserttbSSimg(tbSSimg instance);
+    partial void UpdatetbSSimg(tbSSimg instance);
+    partial void DeletetbSSimg(tbSSimg instance);
+    partial void InserttbVimg(tbVimg instance);
+    partial void UpdatetbVimg(tbVimg instance);
+    partial void DeletetbVimg(tbVimg instance);
     #endregion
 		
 		public DataClassesDataContext() : 
@@ -147,6 +165,54 @@ namespace Travel
 			get
 			{
 				return this.GetTable<Visit_Place>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbFBimg> tbFBimgs
+		{
+			get
+			{
+				return this.GetTable<tbFBimg>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbFPimg> tbFPimgs
+		{
+			get
+			{
+				return this.GetTable<tbFPimg>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbHCimg> tbHCimgs
+		{
+			get
+			{
+				return this.GetTable<tbHCimg>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbHotelimg> tbHotelimgs
+		{
+			get
+			{
+				return this.GetTable<tbHotelimg>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbSSimg> tbSSimgs
+		{
+			get
+			{
+				return this.GetTable<tbSSimg>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbVimg> tbVimgs
+		{
+			get
+			{
+				return this.GetTable<tbVimg>();
 			}
 		}
 	}
@@ -1174,6 +1240,666 @@ namespace Travel
 					this._CreatedDate = value;
 					this.SendPropertyChanged("CreatedDate");
 					this.OnCreatedDateChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbFBimg")]
+	public partial class tbFBimg : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Food_Bev_Image_ID;
+		
+		private System.Data.Linq.Binary _image;
+		
+		private string _Visit_Place_ID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnFood_Bev_Image_IDChanging(string value);
+    partial void OnFood_Bev_Image_IDChanged();
+    partial void OnimageChanging(System.Data.Linq.Binary value);
+    partial void OnimageChanged();
+    partial void OnVisit_Place_IDChanging(string value);
+    partial void OnVisit_Place_IDChanged();
+    #endregion
+		
+		public tbFBimg()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Food_Bev_Image_ID", DbType="Char(36) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Food_Bev_Image_ID
+		{
+			get
+			{
+				return this._Food_Bev_Image_ID;
+			}
+			set
+			{
+				if ((this._Food_Bev_Image_ID != value))
+				{
+					this.OnFood_Bev_Image_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Food_Bev_Image_ID = value;
+					this.SendPropertyChanged("Food_Bev_Image_ID");
+					this.OnFood_Bev_Image_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_image", DbType="Image NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary image
+		{
+			get
+			{
+				return this._image;
+			}
+			set
+			{
+				if ((this._image != value))
+				{
+					this.OnimageChanging(value);
+					this.SendPropertyChanging();
+					this._image = value;
+					this.SendPropertyChanged("image");
+					this.OnimageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Visit_Place_ID", DbType="Char(36) NOT NULL", CanBeNull=false)]
+		public string Visit_Place_ID
+		{
+			get
+			{
+				return this._Visit_Place_ID;
+			}
+			set
+			{
+				if ((this._Visit_Place_ID != value))
+				{
+					this.OnVisit_Place_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Visit_Place_ID = value;
+					this.SendPropertyChanged("Visit_Place_ID");
+					this.OnVisit_Place_IDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbFPimg")]
+	public partial class tbFPimg : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Famous_Place_Image_ID;
+		
+		private System.Data.Linq.Binary _image;
+		
+		private string _Visit_Place_ID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnFamous_Place_Image_IDChanging(string value);
+    partial void OnFamous_Place_Image_IDChanged();
+    partial void OnimageChanging(System.Data.Linq.Binary value);
+    partial void OnimageChanged();
+    partial void OnVisit_Place_IDChanging(string value);
+    partial void OnVisit_Place_IDChanged();
+    #endregion
+		
+		public tbFPimg()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Famous_Place_Image_ID", DbType="Char(36) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Famous_Place_Image_ID
+		{
+			get
+			{
+				return this._Famous_Place_Image_ID;
+			}
+			set
+			{
+				if ((this._Famous_Place_Image_ID != value))
+				{
+					this.OnFamous_Place_Image_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Famous_Place_Image_ID = value;
+					this.SendPropertyChanged("Famous_Place_Image_ID");
+					this.OnFamous_Place_Image_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_image", DbType="Image NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary image
+		{
+			get
+			{
+				return this._image;
+			}
+			set
+			{
+				if ((this._image != value))
+				{
+					this.OnimageChanging(value);
+					this.SendPropertyChanging();
+					this._image = value;
+					this.SendPropertyChanged("image");
+					this.OnimageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Visit_Place_ID", DbType="Char(36) NOT NULL", CanBeNull=false)]
+		public string Visit_Place_ID
+		{
+			get
+			{
+				return this._Visit_Place_ID;
+			}
+			set
+			{
+				if ((this._Visit_Place_ID != value))
+				{
+					this.OnVisit_Place_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Visit_Place_ID = value;
+					this.SendPropertyChanged("Visit_Place_ID");
+					this.OnVisit_Place_IDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbHCimg")]
+	public partial class tbHCimg : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Hospital_Clinic_Image_ID;
+		
+		private System.Data.Linq.Binary _image;
+		
+		private string _Visit_Place_ID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnHospital_Clinic_Image_IDChanging(string value);
+    partial void OnHospital_Clinic_Image_IDChanged();
+    partial void OnimageChanging(System.Data.Linq.Binary value);
+    partial void OnimageChanged();
+    partial void OnVisit_Place_IDChanging(string value);
+    partial void OnVisit_Place_IDChanged();
+    #endregion
+		
+		public tbHCimg()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Hospital_Clinic_Image_ID", DbType="Char(36) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Hospital_Clinic_Image_ID
+		{
+			get
+			{
+				return this._Hospital_Clinic_Image_ID;
+			}
+			set
+			{
+				if ((this._Hospital_Clinic_Image_ID != value))
+				{
+					this.OnHospital_Clinic_Image_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Hospital_Clinic_Image_ID = value;
+					this.SendPropertyChanged("Hospital_Clinic_Image_ID");
+					this.OnHospital_Clinic_Image_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_image", DbType="Image NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary image
+		{
+			get
+			{
+				return this._image;
+			}
+			set
+			{
+				if ((this._image != value))
+				{
+					this.OnimageChanging(value);
+					this.SendPropertyChanging();
+					this._image = value;
+					this.SendPropertyChanged("image");
+					this.OnimageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Visit_Place_ID", DbType="Char(36) NOT NULL", CanBeNull=false)]
+		public string Visit_Place_ID
+		{
+			get
+			{
+				return this._Visit_Place_ID;
+			}
+			set
+			{
+				if ((this._Visit_Place_ID != value))
+				{
+					this.OnVisit_Place_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Visit_Place_ID = value;
+					this.SendPropertyChanged("Visit_Place_ID");
+					this.OnVisit_Place_IDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbHotelimg")]
+	public partial class tbHotelimg : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Hotel_Image_ID;
+		
+		private System.Data.Linq.Binary _image;
+		
+		private string _Visit_Place_ID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnHotel_Image_IDChanging(string value);
+    partial void OnHotel_Image_IDChanged();
+    partial void OnimageChanging(System.Data.Linq.Binary value);
+    partial void OnimageChanged();
+    partial void OnVisit_Place_IDChanging(string value);
+    partial void OnVisit_Place_IDChanged();
+    #endregion
+		
+		public tbHotelimg()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Hotel_Image_ID", DbType="Char(36) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Hotel_Image_ID
+		{
+			get
+			{
+				return this._Hotel_Image_ID;
+			}
+			set
+			{
+				if ((this._Hotel_Image_ID != value))
+				{
+					this.OnHotel_Image_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Hotel_Image_ID = value;
+					this.SendPropertyChanged("Hotel_Image_ID");
+					this.OnHotel_Image_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_image", DbType="Image NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary image
+		{
+			get
+			{
+				return this._image;
+			}
+			set
+			{
+				if ((this._image != value))
+				{
+					this.OnimageChanging(value);
+					this.SendPropertyChanging();
+					this._image = value;
+					this.SendPropertyChanged("image");
+					this.OnimageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Visit_Place_ID", DbType="Char(36) NOT NULL", CanBeNull=false)]
+		public string Visit_Place_ID
+		{
+			get
+			{
+				return this._Visit_Place_ID;
+			}
+			set
+			{
+				if ((this._Visit_Place_ID != value))
+				{
+					this.OnVisit_Place_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Visit_Place_ID = value;
+					this.SendPropertyChanged("Visit_Place_ID");
+					this.OnVisit_Place_IDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbSSimg")]
+	public partial class tbSSimg : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Souvenir_Shop_Image_ID;
+		
+		private System.Data.Linq.Binary _image;
+		
+		private string _Visit_Place_ID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSouvenir_Shop_Image_IDChanging(string value);
+    partial void OnSouvenir_Shop_Image_IDChanged();
+    partial void OnimageChanging(System.Data.Linq.Binary value);
+    partial void OnimageChanged();
+    partial void OnVisit_Place_IDChanging(string value);
+    partial void OnVisit_Place_IDChanged();
+    #endregion
+		
+		public tbSSimg()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Souvenir_Shop_Image_ID", DbType="Char(36) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Souvenir_Shop_Image_ID
+		{
+			get
+			{
+				return this._Souvenir_Shop_Image_ID;
+			}
+			set
+			{
+				if ((this._Souvenir_Shop_Image_ID != value))
+				{
+					this.OnSouvenir_Shop_Image_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Souvenir_Shop_Image_ID = value;
+					this.SendPropertyChanged("Souvenir_Shop_Image_ID");
+					this.OnSouvenir_Shop_Image_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_image", DbType="Image NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary image
+		{
+			get
+			{
+				return this._image;
+			}
+			set
+			{
+				if ((this._image != value))
+				{
+					this.OnimageChanging(value);
+					this.SendPropertyChanging();
+					this._image = value;
+					this.SendPropertyChanged("image");
+					this.OnimageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Visit_Place_ID", DbType="Char(36) NOT NULL", CanBeNull=false)]
+		public string Visit_Place_ID
+		{
+			get
+			{
+				return this._Visit_Place_ID;
+			}
+			set
+			{
+				if ((this._Visit_Place_ID != value))
+				{
+					this.OnVisit_Place_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Visit_Place_ID = value;
+					this.SendPropertyChanged("Visit_Place_ID");
+					this.OnVisit_Place_IDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbVimg")]
+	public partial class tbVimg : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Vehicle_Image_ID;
+		
+		private System.Data.Linq.Binary _image;
+		
+		private string _Visit_Place_ID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnVehicle_Image_IDChanging(string value);
+    partial void OnVehicle_Image_IDChanged();
+    partial void OnimageChanging(System.Data.Linq.Binary value);
+    partial void OnimageChanged();
+    partial void OnVisit_Place_IDChanging(string value);
+    partial void OnVisit_Place_IDChanged();
+    #endregion
+		
+		public tbVimg()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vehicle_Image_ID", DbType="Char(36) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Vehicle_Image_ID
+		{
+			get
+			{
+				return this._Vehicle_Image_ID;
+			}
+			set
+			{
+				if ((this._Vehicle_Image_ID != value))
+				{
+					this.OnVehicle_Image_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Vehicle_Image_ID = value;
+					this.SendPropertyChanged("Vehicle_Image_ID");
+					this.OnVehicle_Image_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_image", DbType="Image NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary image
+		{
+			get
+			{
+				return this._image;
+			}
+			set
+			{
+				if ((this._image != value))
+				{
+					this.OnimageChanging(value);
+					this.SendPropertyChanging();
+					this._image = value;
+					this.SendPropertyChanged("image");
+					this.OnimageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Visit_Place_ID", DbType="Char(36) NOT NULL", CanBeNull=false)]
+		public string Visit_Place_ID
+		{
+			get
+			{
+				return this._Visit_Place_ID;
+			}
+			set
+			{
+				if ((this._Visit_Place_ID != value))
+				{
+					this.OnVisit_Place_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Visit_Place_ID = value;
+					this.SendPropertyChanged("Visit_Place_ID");
+					this.OnVisit_Place_IDChanged();
 				}
 			}
 		}

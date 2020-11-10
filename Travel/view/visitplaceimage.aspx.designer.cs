@@ -11,35 +11,26 @@ namespace Travel.view
 {
 
 
-    public partial class pyongyang
+    public partial class visitplaceimage
     {
 
         /// <summary>
-        /// form1 control.
+        /// ddlVisitPlaceName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlVisitPlaceName;
 
         /// <summary>
-        /// txtVisitPlaceName control.
+        /// imgVisitPlace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtVisitPlaceName;
-
-        /// <summary>
-        /// txtVisitPlaceDesc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtVisitPlaceDesc;
+        protected global::System.Web.UI.WebControls.FileUpload imgVisitPlace;
 
         /// <summary>
         /// btnSave control.
